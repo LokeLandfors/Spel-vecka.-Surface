@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ButtonUI : MonoBehaviour
 {
-    [SerializeField] private string newLevel = "Office";
+    [SerializeField] private string newGameLevel = "Office";
 
     public void NewLevel()
     {
-        SceneManager.LoadScene(newLevel);
+        SceneManager.LoadScene(newGameLevel);
     }
 }
