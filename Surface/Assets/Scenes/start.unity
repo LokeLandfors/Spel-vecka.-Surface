@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf37d7e36e5414381df1321cab50d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevel: Office
+  newGameLevel: Drunk
 --- !u!4 &1633988964
 Transform:
   m_ObjectHideFlags: 0
