@@ -1,33 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class WeaponFollow : MonoBehaviour
 {
-    public Camera mainCamera;
-    public float rotationOffset = 0f;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] float speed;
 
-    void Start()
+    private GameObject player;
+
+    Vector2 moveDir;
+
+    private void LookAtMouse()
     {
-        if (mainCamera == null)
-        {
-            mainCamera = Camera.main;
-        }
+        Vector2 mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y); // Aims at mouse
     }
 
-    void Update()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        FollowMouse();
-    }
-
-    void FollowMouse()
-    {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, mainCamera.nearClipPlane));
-
-        Vector3 direction = mousePosition - transform.position;
-        direction.z = 0f; // Ensure the weapon stays on the same plane
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle + rotationOffset);
+        LookAtMouse(); // Aims at mouse
+        //moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        //rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
     }
 }
- 

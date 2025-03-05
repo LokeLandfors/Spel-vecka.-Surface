@@ -13,11 +13,13 @@ public class PlayerMovement : MonoBehaviour
     public float maxStamina;
     public Slider staminaBar;
     public Slider usageWheel;
+    private Animator animator;
 
     void Start()
     {
         stamina = maxStamina;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         //isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            stamina -= 20;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
