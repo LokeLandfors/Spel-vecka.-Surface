@@ -7,10 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed = 2f;
     public float runSpeed = 5f;
     public float jumpForce = 10f;
-    public LayerMask groundLayer;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private bool isSprinting;
     float stamina;
     public float maxStamina;
     public Slider staminaBar;
