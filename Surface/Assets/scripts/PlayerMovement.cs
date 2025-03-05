@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     {
         stamina = maxStamina;
         rb = GetComponent<Rigidbody2D>();
-        isGrounded = transform.Find("Groundsensor").GetComponent<PlayerSensor>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
