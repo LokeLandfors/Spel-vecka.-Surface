@@ -16,12 +16,16 @@ public class PlayerMovement : MonoBehaviour
     public Slider staminaBar;
     public Slider usageWheel;
     private Animator animator;
+    public SpriteRenderer sprite;
+    public Animator anim;
+    playerSlide slide;
 
     void Start()
     {
         stamina = maxStamina;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        slide = GetComponent<playerSlide>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,13 +47,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            sprite.flipX = true;
             isFacingRight = false;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            sprite.flipX = false;
             isFacingRight = true;
         }
 
@@ -86,7 +90,11 @@ public class PlayerMovement : MonoBehaviour
     void Move(float direction)
     {
         float moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        if (slide.isSliding == false)
+        {
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        }
+        
 
         float absoluteSpeed = Mathf.Abs(direction * moveSpeed);
         //animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
