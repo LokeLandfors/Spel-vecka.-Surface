@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonUI : MonoBehaviour
+public class Unlimited : MonoBehaviour
 {
-    [SerializeField] public string newGameLevel = "Drunk";
+    [SerializeField] private string newGameLevel = "Unlimited";
 
     public void NewLevel()
     {

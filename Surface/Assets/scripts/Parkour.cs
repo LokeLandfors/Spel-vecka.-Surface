@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonUI : MonoBehaviour
+public class Parkour : MonoBehaviour
 {
-    [SerializeField] public string newGameLevel = "Drunk";
+    [SerializeField] private string newGameLevel = "Parkour";
 
     public void NewLevel()
     {
