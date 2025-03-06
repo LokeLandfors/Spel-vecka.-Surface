@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed = 2f;
     public float runSpeed = 5f;
     public float jumpForce = 10f;
+    private bool isFacingRight = true; // Kolla vilket håll karaktären tittar i
     private Rigidbody2D rb;
     private bool isGrounded;
     float stamina;
@@ -29,14 +31,27 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
-    } 
+    }
 
     void Update()
     {
-        Move();
+        float moveDirection = Input.GetAxis("Horizontal");  // Kolla om vi rör oss horisontellt
+
+        Move(moveDirection); // Flytta spelaren
+        
         Jump();
 
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+            isFacingRight = false;
+        }
 
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            isFacingRight = true;
+        }
 
         if (Input.GetKey("left shift") == true)
         {
@@ -66,10 +81,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Move()
+
+
+    void Move(float direction)
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        float absoluteSpeed = Mathf.Abs(direction * moveSpeed);
+        animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
     }
 
     void Jump()
@@ -80,5 +100,12 @@ public class PlayerMovement : MonoBehaviour
             stamina -= 20;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+    }
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;  // Flippa player spriten horizontellt
+        transform.Rotate(0f, 180f, 0f);
+        //Transform firepoint = transform.Find("FirePoint");
+        //firepoint.localPosition = new Vector3(-firepoint.localPosition.x, firepoint.localPosition.y, firepoint.localPosition.z);
     }
 }
