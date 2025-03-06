@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
         float absoluteSpeed = Mathf.Abs(direction * moveSpeed);
-        animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
+        //animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
     }
 
     void Jump()
