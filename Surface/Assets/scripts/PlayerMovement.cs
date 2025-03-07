@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) == true)
+        if (Input.GetKey(KeyCode.LeftShift) == true)
         {
             if (stamina > 0)
             {
@@ -91,10 +91,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
 
-        float walking = Mathf.Abs(direction * moveSpeed);
-        animator.SetFloat("Speed", walking); // Använd Speed parametern i animatorn
 
-        float running = Mathf.Abs(direction * runSpeed);
+        float running = Mathf.Abs(direction * moveSpeed);
         animator.SetFloat("Speed", running); // Använd Speed parametern i animatorn
     }
 

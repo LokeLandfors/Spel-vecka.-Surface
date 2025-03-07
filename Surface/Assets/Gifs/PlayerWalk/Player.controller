@@ -17,7 +17,7 @@ AnimatorStateMachine:
     m_Position: {x: 120, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2996939077587644267}
-    m_Position: {x: 130, y: 260, z: 0}
+    m_Position: {x: 120, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4162629360811754386}
     m_Position: {x: -100, y: -60, z: 0}
@@ -223,13 +223,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsSlide
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
