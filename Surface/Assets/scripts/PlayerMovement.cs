@@ -27,11 +27,11 @@ public class PlayerMovement : MonoBehaviour
         slide = GetComponent<playerSlide>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
         isGrounded = true;
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D other)
     {
         isGrounded = false;
     }
