@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         
 
         float absoluteSpeed = Mathf.Abs(direction * moveSpeed);
-        //animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
+        animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
     }
 
     void Jump()
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isFacingRight = !isFacingRight;  // Flippa player spriten horizontellt
         transform.Rotate(0f, 180f, 0f);
-        //Transform firepoint = transform.Find("FirePoint");
-        //firepoint.localPosition = new Vector3(-firepoint.localPosition.x, firepoint.localPosition.y, firepoint.localPosition.z);
+        Transform firepoint = transform.Find("FirePoint");
+        firepoint.localPosition = new Vector3(-firepoint.localPosition.x, firepoint.localPosition.y, firepoint.localPosition.z);
     }
 }
