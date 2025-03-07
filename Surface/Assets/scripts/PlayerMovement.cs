@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            moveSpeed = walkSpeed;
             if (stamina < maxStamina)
             {
                 stamina += 30 * Time.deltaTime;
@@ -96,8 +97,11 @@ public class PlayerMovement : MonoBehaviour
         }
         
 
-        float absoluteSpeed = Mathf.Abs(direction * moveSpeed);
-        animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
+        float walking = Mathf.Abs(direction * moveSpeed);
+        animator.SetFloat("Speed", walking); // Använd Speed parametern i animatorn
+
+        float running = Mathf.Abs(direction * runSpeed);
+        animator.SetFloat("Speed", running); // Använd Speed parametern i animatorn
     }
 
     void Jump()
