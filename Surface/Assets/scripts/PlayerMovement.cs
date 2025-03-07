@@ -47,13 +47,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            sprite.flipX = true;
+            //sprite.flipX = true;
             isFacingRight = false;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            sprite.flipX = false;
+            //sprite.flipX = false;
             isFacingRight = true;
         }
 
@@ -90,14 +90,14 @@ public class PlayerMovement : MonoBehaviour
     void Move(float direction)
     {
         float moveInput = Input.GetAxis("Horizontal");
-        if (slide.isSliding == false)
+        //if (slide.isSliding == false)
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
         
 
         float absoluteSpeed = Mathf.Abs(direction * moveSpeed);
-        //animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
+        animator.SetFloat("Speed", absoluteSpeed); // Använd Speed parametern i animatorn
     }
 
     void Jump()
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isFacingRight = !isFacingRight;  // Flippa player spriten horizontellt
         transform.Rotate(0f, 180f, 0f);
-        //Transform firepoint = transform.Find("FirePoint");
-        //firepoint.localPosition = new Vector3(-firepoint.localPosition.x, firepoint.localPosition.y, firepoint.localPosition.z);
+        Transform firepoint = transform.Find("FirePoint");
+        firepoint.localPosition = new Vector3(-firepoint.localPosition.x, firepoint.localPosition.y, firepoint.localPosition.z);
     }
 }
