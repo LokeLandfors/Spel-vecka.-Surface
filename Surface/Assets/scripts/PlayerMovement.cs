@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator anim;
     playerSlide slide;
-
     void Start()
     {
         stamina = maxStamina;
@@ -57,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = true;
         }
 
-        if (Input.GetKey("left shift") == true)
+        if (Input.GetKeyDown(KeyCode.LeftShift) == true)
         {
             if (stamina > 0)
             {
@@ -75,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
                 stamina += 30 * Time.deltaTime;
                 moveSpeed = walkSpeed;
             }
-
             usageWheel.value = stamina / maxStamina;
         }
         staminaBar.value = stamina / maxStamina;
@@ -85,9 +83,6 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = walkSpeed;
         }
     }
-
-
-
     void Move(float direction)
     {
         float moveInput = Input.GetAxis("Horizontal");
@@ -95,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
-        
 
         float walking = Mathf.Abs(direction * moveSpeed);
         animator.SetFloat("Speed", walking); // Använd Speed parametern i animatorn
