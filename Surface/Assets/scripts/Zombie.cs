@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zombie : MonoBehaviour
 {
     Transform target;
-    public Transform borderCheck;
+    public Transform borderCheck;   
     // Start is called before the first frame update
     void Start()
     {

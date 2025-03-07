@@ -6,6 +6,7 @@ public class GunFlip : MonoBehaviour
     public GameObject gun;
     public Transform anchorArm;
     public SpriteRenderer sprite;
+    public GameObject firePoint;
 
     [SerializeField] GameObject player;
 
@@ -19,6 +20,8 @@ public class GunFlip : MonoBehaviour
         {
             Debug.LogError("Please assign the anchorArm and gun in the inspector.");
         }
+        Vector3 currentPosition = firePoint.transform.localPosition;
+        firePoint.transform.localPosition = currentPosition;
 
         previousRotation = anchorArm.eulerAngles.z;
     }
@@ -28,7 +31,6 @@ public class GunFlip : MonoBehaviour
     {
         float currentRotation = anchorArm.eulerAngles.z;
         float offset = (anchorArm.transform.position - player.transform.position).x;
-        print(currentRotation);
         // Check if the anchorArm has passed through the 0-degree mark
         if (currentRotation >= 180f)
         {
@@ -50,10 +52,12 @@ public class GunFlip : MonoBehaviour
     private void FlipGun1()
     {
         sprite.flipY = false;
+        firePoint.transform.localPosition = new Vector3(0.3268053f, 0.193889f, 0f);
     }
     private void FlipGun2()
     {
         sprite.flipY = true;
+        firePoint.transform.localPosition = new Vector3(0.3268053f, -0.193889f, 0f);
     }
 }
 
