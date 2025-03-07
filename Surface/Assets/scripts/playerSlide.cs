@@ -11,13 +11,16 @@ public class playerSlide : MonoBehaviour
     public Animator anim;
     public BoxCollider2D regularCall;
     public BoxCollider2D slideCall;
-
+    private bool canSlide = true;
     public float slidespeed = 1800f;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
-            PerfromSlide();
+            if (canSlide == true)
+            {
+                PerfromSlide();
+            }
     }
 
 
@@ -42,13 +45,15 @@ public class playerSlide : MonoBehaviour
 
     IEnumerator stopSlide()
     {
+        canSlide = false;
         yield return new WaitForSeconds(0.8f);
         anim.Play("PlayerIdle");
         anim.SetBool("IsSlide", false);
         regularCall.enabled = true;
         slideCall.enabled = false;
         isSliding = false;
-
+        yield return new WaitForSeconds(0.5f);
+        canSlide = true;
     }
 
 }
