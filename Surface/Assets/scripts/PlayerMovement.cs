@@ -47,13 +47,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            sprite.flipX = true;
+            //sprite.flipX = true;
             isFacingRight = false;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            sprite.flipX = false;
+            //sprite.flipX = false;
             isFacingRight = true;
         }
 
@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
     void Move(float direction)
     {
         float moveInput = Input.GetAxis("Horizontal");
-        if (slide.isSliding == false)
+        //if (slide.isSliding == false)
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
