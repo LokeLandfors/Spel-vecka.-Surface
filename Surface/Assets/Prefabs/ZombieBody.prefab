@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 512890378228349049}
   - component: {fileID: 512890378228349050}
   - component: {fileID: 512890378228349045}
+  - component: {fileID: 3578884813640869396}
   m_Layer: 0
   m_Name: ZombieBody
   m_TagString: Untagged
@@ -267,3 +268,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1497345, y: 0.6296921}
   m_EdgeRadius: 0
+--- !u!114 &3578884813640869396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512890378228348994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e87fc7824cdfbc498b38c5401948d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
