@@ -160,10 +160,10 @@ TextureImporter:
       name: greg run_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 256
-        width: 17
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: greg run_1
       rect:
         serializedVersion: 2
-        x: 69
+        x: 64
         y: 256
-        width: 17
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: greg run_2
       rect:
         serializedVersion: 2
-        x: 133
+        x: 128
         y: 256
-        width: 17
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: greg run_3
       rect:
         serializedVersion: 2
-        x: 197
+        x: 192
         y: 256
-        width: 17
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: greg run_4
       rect:
         serializedVersion: 2
-        x: 261
+        x: 256
         y: 256
-        width: 17
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: greg run_5
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 192
-        width: 19
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: greg run_6
       rect:
         serializedVersion: 2
-        x: 68
+        x: 64
         y: 192
-        width: 18
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: greg run_7
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 192
-        width: 16
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: greg run_8
       rect:
         serializedVersion: 2
-        x: 200
+        x: 192
         y: 192
-        width: 16
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: greg run_9
       rect:
         serializedVersion: 2
-        x: 264
+        x: 256
         y: 192
-        width: 15
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: greg run_10
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 128
-        width: 15
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: greg run_11
       rect:
         serializedVersion: 2
-        x: 71
+        x: 64
         y: 128
-        width: 16
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: greg run_12
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 128
-        width: 17
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: greg run_13
       rect:
         serializedVersion: 2
-        x: 198
+        x: 192
         y: 128
-        width: 17
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: greg run_14
       rect:
         serializedVersion: 2
-        x: 262
+        x: 256
         y: 128
-        width: 17
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: greg run_15
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 64
-        width: 17
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: greg run_16
       rect:
         serializedVersion: 2
-        x: 70
+        x: 64
         y: 64
-        width: 17
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: greg run_17
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 64
-        width: 17
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: greg run_18
       rect:
         serializedVersion: 2
-        x: 196
-        y: 65
-        width: 19
-        height: 51
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: greg run_19
       rect:
         serializedVersion: 2
-        x: 261
-        y: 65
-        width: 17
-        height: 50
+        x: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: greg run_20
       rect:
         serializedVersion: 2
-        x: 6
-        y: 2
-        width: 16
-        height: 49
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: greg run_21
       rect:
         serializedVersion: 2
-        x: 69
-        y: 3
-        width: 17
-        height: 48
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
