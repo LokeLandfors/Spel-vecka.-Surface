@@ -13,6 +13,6 @@ public class BlackScreen2 : MonoBehaviour
     private IEnumerator fadeImage()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }

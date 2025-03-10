@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: 00bb63e804d56954e93d130bd5c5155b
+  - enabled: 1
     path: Assets/Scenes/Drunk.unity
     guid: 2e18bd3c1441f4340915820e32d65ae9
   - enabled: 1

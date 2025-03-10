@@ -9,7 +9,7 @@ public class SceneChange : MonoBehaviour
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(2); // Load the scene at build 2
+            SceneManager.LoadScene(3); // Load the scene at build 4
         }
     }
 

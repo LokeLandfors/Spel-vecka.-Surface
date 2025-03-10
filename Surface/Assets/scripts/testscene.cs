@@ -13,6 +13,6 @@ public class testscene : MonoBehaviour
     private IEnumerator fadeImage()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
